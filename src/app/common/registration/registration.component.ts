@@ -23,6 +23,7 @@ export class RegistrationComponent implements OnInit,OnDestroy {
   ngOnDestroy(){
     if(this.registerSubs){
       this.registerSubs.unsubscribe();
+      console.log("Destroy");
     }
   }
   registerMe(form:NgForm){
