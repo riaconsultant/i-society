@@ -4,7 +4,6 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-forgotpassword',
   templateUrl: './forgotpassword.component.html',
-  styleUrls: ['./forgotpassword.component.scss'],
   changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class ForgotpasswordComponent implements OnInit,OnDestroy {
