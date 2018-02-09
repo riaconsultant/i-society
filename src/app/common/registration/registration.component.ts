@@ -6,14 +6,12 @@ import { NgForm } from '@angular/forms';
   templateUrl: './registration.component.html',
 })
 export class RegistrationComponent implements OnInit,OnDestroy {
-  model:{
-    uname:"sdgsdg"
-  }
+  model:{}
 
   constructor() { }
 
   ngOnInit() {
-
+    this.model = {}
   }
   ngOnChanges(){
 
