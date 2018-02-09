@@ -5,7 +5,10 @@ import { NgForm } from '@angular/forms';
   selector: 'app-registration',
   templateUrl: './registration.component.html',
 })
-export class RegistrationComponent implements OnInit,OnChanges,OnDestroy {
+export class RegistrationComponent implements OnInit,OnDestroy {
+  model:{
+    uname:"sdgsdg"
+  }
 
   constructor() { }
 

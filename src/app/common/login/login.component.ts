@@ -7,7 +7,8 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit,OnDestroy {
   model={
-    name:"Manoj"
+    email:"",
+    password:""
   }
   constructor() { }
 
