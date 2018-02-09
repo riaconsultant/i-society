@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit,OnDestroy {
   ngOnDestroy(){
 
   }
+  
 
   loginMe(form:NgForm){
     console.log(form.value);
