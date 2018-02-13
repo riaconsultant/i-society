@@ -7,11 +7,6 @@ export class AuthService {
 
   constructor(private _http:HttpClient) { }
 
-
-  registerService(data){
-    return this._http.post(environment.api_url+"/register",data);
-  }
-
   loginService(data){
     return this._http.post(environment.api_url+"/login",data);
   }
