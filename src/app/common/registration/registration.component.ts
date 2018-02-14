@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { User } from '../../model/user';
 import { ProfileService } from '../../service/profile.service';
 import { HttpErrorResponse } from '@angular/common/http/src/response';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +11,7 @@ import { HttpErrorResponse } from '@angular/common/http/src/response';
 })
 export class RegistrationComponent implements OnInit,OnDestroy {
   model:User
-
+  registerSubs:Subscription;
   constructor(private profile:ProfileService) { }
 
   ngOnInit() {
@@ -20,12 +21,14 @@ export class RegistrationComponent implements OnInit,OnDestroy {
 
   }
   ngOnDestroy(){
-
+    if(this.registerSubs){
+      this.registerSubs.unsubscribe();
+    }
   }
   registerMe(form:NgForm){
     console.log("Register form data",form);
     if(form.valid){
-      this.profile.registerProfile(form.value).subscribe((result:any)=>{
+      this.registerSubs=this.profile.registerProfile(form.value).subscribe((result:any)=>{
 
       },(error:HttpErrorResponse)=>{
         console.log("HttpErrorResponse",error);
