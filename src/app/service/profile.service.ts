@@ -15,6 +15,5 @@ export class ProfileService {
   registerProfile(data){
     return this._http.post(environment.api_url+"/register",data);
   }
-
-
+  
 }
