@@ -28,7 +28,7 @@ export class RegistrationComponent implements OnInit,OnDestroy {
       this.profile.registerProfile(form.value).subscribe((result:any)=>{
 
       },(error:HttpErrorResponse)=>{
-        
+        console.log("HttpErrorResponse",error);
       })
     }
     
