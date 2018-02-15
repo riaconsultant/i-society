@@ -7,6 +7,11 @@ export class AuthService {
 
   constructor(private _http:HttpClient) { }
 
+  getAuthValid(){
+    let data={};
+    this.loginService(data).subscribe((result:any)=>{},(error)=>{},(complete)=>{})
+  }
+  
   loginService(data){
     return this._http.post(environment.api_url+"/login",data);
   }
