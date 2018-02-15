@@ -9,16 +9,17 @@ import { Subscription } from 'rxjs/Subscription';
   selector: 'app-registration',
   templateUrl: './registration.component.html',
 })
-export class RegistrationComponent implements OnInit,OnDestroy {
+export class RegistrationComponent implements OnInit,OnChanges OnDestroy {
   model:User
   registerSubs:Subscription;
   constructor(private profile:ProfileService) { }
 
   ngOnInit() {
     this.model = new User();
+    console.log("Init");
   }
   ngOnChanges(){
-
+    console.log("Changes");
   }
   ngOnDestroy(){
     if(this.registerSubs){
