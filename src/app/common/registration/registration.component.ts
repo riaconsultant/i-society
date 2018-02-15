@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs/Subscription';
   selector: 'app-registration',
   templateUrl: './registration.component.html',
 })
-export class RegistrationComponent implements OnInit,OnChanges OnDestroy {
+export class RegistrationComponent implements OnInit,OnChanges,OnDestroy {
   model:User
   registerSubs:Subscription;
   constructor(private profile:ProfileService) { }
