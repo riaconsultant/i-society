@@ -33,6 +33,7 @@ export class RegistrationComponent implements OnInit,OnChanges OnDestroy {
       this.registerSubs=this.profile.registerProfile(form.value).subscribe((result:any)=>{
 
       },(error:HttpErrorResponse)=>{
+        let errData = error.error;
         console.log("HttpErrorResponse",error);
       })
     }
