@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
@@ -9,7 +10,11 @@ export class AuthService {
 
   getAuthValid(){
     let data={};
-    this.loginService(data).subscribe((result:any)=>{},(error)=>{},(complete)=>{})
+    this.loginService(data).subscribe((result:any)=>{
+
+    },(error)=>{
+      
+    });
   }
   
   loginService(data){
