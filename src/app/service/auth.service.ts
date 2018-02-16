@@ -12,7 +12,7 @@ export class AuthService {
   getAuthValid(){
     let data={};
     this.loginService(data).subscribe((result:any)=>{
-
+      console.log("Result",result);
     },(error:HttpErrorResponse)=>{
       console.log("Error",error.error);
     });
