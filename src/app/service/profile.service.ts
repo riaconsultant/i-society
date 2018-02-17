@@ -16,7 +16,7 @@ export class ProfileService {
   }
 
   registerProfile(data){
-    return this._http.post(environment.api_url+"/register",data)
+    return this._http.post(environment.api_url+"user/signup",data)
                         .catch((error:HttpErrorResponse)=>{
                           if(error.error instanceof Error){
                             console.log("Error",error.error.message);

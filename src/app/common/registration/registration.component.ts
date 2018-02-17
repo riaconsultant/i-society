@@ -2,7 +2,7 @@ import { Component, OnInit,OnChanges,OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { User } from '../../model/user';
 import { ProfileService } from '../../service/profile.service';
-import { HttpErrorResponse } from '@angular/common/http/src/response';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
