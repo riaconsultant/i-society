@@ -18,7 +18,7 @@
 
           </div>
         <button type="submit" class="btn btn-primary block full-width m-b">
-            <i class="fa fa-refresh fa-spin"></i>  Login
+            <i *ngIf="loading" class="fa fa-refresh fa-spin"></i>  Login
         </button>
 
           <a  routerLink="/forgotpassword"><small>Forgot password?</small></a>

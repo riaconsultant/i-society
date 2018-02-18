@@ -19,10 +19,10 @@ export class AuthService {
   }
   
   loginService(data){
-    return this._http.post(environment.api_url+"/login",data);
+    return this._http.post(environment.api_url+"login",data);
   }
   logoutService(data){
-    return this._http.get(environment.api_url+"/logout");
+    return this._http.get(environment.api_url+"logout");
   }
 
 }

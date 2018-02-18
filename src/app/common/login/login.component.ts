@@ -1,6 +1,9 @@
 import { Component, OnInit, OnDestroy, OnChanges , ChangeDetectionStrategy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Title, Meta } from '@angular/platform-browser';
+import { ProfileService, AuthService } from '../../service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +12,12 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class LoginComponent implements OnInit, OnChanges,OnDestroy {
   loading:boolean=false
+  loginSub: Subscription
   model={
     email:"",
     password:""
   }
-  constructor(private _title:Title,private _meta:Meta) { }
+  constructor(private _title:Title,private _meta:Meta,private _profile:ProfileService, private _auth:AuthService) { }
 
   ngOnInit() {
     this._title.setTitle("MySociety: Login");
@@ -29,11 +33,19 @@ export class LoginComponent implements OnInit, OnChanges,OnDestroy {
   }
 
   ngOnDestroy(){
-
+    if(this.loginSub){
+      this.loginSub.unsubscribe();
+    }
   }
   
 
   loginMe(form:NgForm){
+    this.loading = true;
+    this.loginSub = this._auth.loginService(form.value).subscribe((result:any)=>{
+      this.loading = false;
+    },(error:HttpErrorResponse)=>{
+      this.loading = false;
+    })
     console.log(form.value);
   }
   socialLogin(arg:String){
