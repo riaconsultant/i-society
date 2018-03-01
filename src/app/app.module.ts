@@ -17,6 +17,7 @@ import { AuthGuard } from './auth.guard';
 import { AppRoute } from './app.route';
 import { ChangepasswordComponent } from './common/changepassword/changepassword.component';
 import { ResetpasswordComponent } from './common/resetpassword/resetpassword.component';
+import { NavigationComponent } from './common/navigation/navigation.component';
 // import { UserComponent } from './profile/user/user.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ResetpasswordComponent } from './common/resetpassword/resetpassword.com
     ForgotpasswordComponent,
     ChangepasswordComponent,
     ResetpasswordComponent,
+    NavigationComponent,
     //...layout.layoutContainer,
     //...user.usrContainer,
     //UserComponent
