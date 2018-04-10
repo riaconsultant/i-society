@@ -15,6 +15,8 @@ import { PagenotfoundComponent } from './common/pagenotfound/pagenotfound.compon
 import { ForgotpasswordComponent } from './common/forgotpassword/forgotpassword.component';
 import { AuthGuard } from './auth.guard';
 import { AppRoute } from './app.route';
+import { ChangepasswordComponent } from './common/changepassword/changepassword.component';
+import { ResetpasswordComponent } from './common/resetpassword/resetpassword.component';
 // import { UserComponent } from './profile/user/user.component';
 
 @NgModule({
@@ -24,6 +26,8 @@ import { AppRoute } from './app.route';
     RegistrationComponent,
     PagenotfoundComponent,
     ForgotpasswordComponent,
+    ChangepasswordComponent,
+    ResetpasswordComponent,
     //...layout.layoutContainer,
     //...user.usrContainer,
     //UserComponent
