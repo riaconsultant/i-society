@@ -8,14 +8,22 @@ import { HttpClientModule} from '@angular/common/http';
 import { environment } from '../environments/environment';
 // import * as user from './common/index';
 // import * as layout from './layout/index';
-// import * as services from './service/index';
-// import { AuthGuard } from './auth.guard';
+import * as services from './service/index';
+import { LoginComponent } from './common/login/login.component';
+import { RegistrationComponent } from './common/registration/registration.component';
+import { PagenotfoundComponent } from './common/pagenotfound/pagenotfound.component';
+import { ForgotpasswordComponent } from './common/forgotpassword/forgotpassword.component';
+import { AuthGuard } from './auth.guard';
 import { AppRoute } from './app.route';
 // import { UserComponent } from './profile/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    RegistrationComponent,
+    PagenotfoundComponent,
+    ForgotpasswordComponent,
     //...layout.layoutContainer,
     //...user.usrContainer,
     //UserComponent
@@ -28,7 +36,7 @@ import { AppRoute } from './app.route';
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [ ],
+  providers: [ ...services.serviceContainer,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
