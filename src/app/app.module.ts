@@ -18,6 +18,7 @@ import { AppRoute } from './app.route';
 import { ChangepasswordComponent } from './common/changepassword/changepassword.component';
 import { ResetpasswordComponent } from './common/resetpassword/resetpassword.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
+import { FaqComponent } from './common/faq/faq.component';
 // import { UserComponent } from './profile/user/user.component';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { NavigationComponent } from './common/navigation/navigation.component';
     ChangepasswordComponent,
     ResetpasswordComponent,
     NavigationComponent,
+    FaqComponent,
     //...layout.layoutContainer,
     //...user.usrContainer,
     //UserComponent
