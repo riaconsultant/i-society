@@ -1,25 +1,26 @@
-import { Component, OnInit,OnChanges,OnDestroy } from '@angular/core';
+import { Component, OnInit,OnChanges,OnDestroy, AfterViewInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { User } from '../../model/user';
 import { ProfileService } from '../../service/profile.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Subscription } from 'rxjs';
+import { CommonService } from '../../service';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
 })
-export class RegistrationComponent implements OnInit,OnChanges,OnDestroy {
+export class RegistrationComponent implements OnInit,AfterViewInit,OnDestroy {
   model:User
   registerSubs:Subscription;
-  constructor(private profile:ProfileService) { }
+  constructor(private profile:ProfileService,private _common:CommonService) { }
 
   ngOnInit() {
     this.model = new User();
     console.log("Init");
   }
-  ngOnChanges(){
-    console.log("Changes");
+  ngAfterViewInit(){
+    this._common.componentBGUpdate('register');
   }
   ngOnDestroy(){
     if(this.registerSubs){

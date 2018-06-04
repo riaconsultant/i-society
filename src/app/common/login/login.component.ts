@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy, OnChanges , ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, OnDestroy, OnChanges , ChangeDetectionStrategy, AfterViewInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Title, Meta } from '@angular/platform-browser';
-import { ProfileService, AuthService } from '../../service';
+import { ProfileService, AuthService, CommonService } from '../../service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 
@@ -10,14 +10,14 @@ import { Subscription } from 'rxjs';
   templateUrl: './login.component.html',
   changeDetection:ChangeDetectionStrategy.OnPush
 })
-export class LoginComponent implements OnInit, OnChanges,OnDestroy {
+export class LoginComponent implements OnInit,AfterViewInit,OnDestroy {
   loading:boolean=false
   loginSub: Subscription
   model={
     email:"",
     password:""
   }
-  constructor(private _title:Title,private _meta:Meta,private _profile:ProfileService, private _auth:AuthService) { }
+  constructor(private _title:Title,private _meta:Meta,private _profile:ProfileService, private _auth:AuthService,private _common:CommonService) { }
 
   ngOnInit() {
     this._title.setTitle("MySociety: Login");
@@ -26,10 +26,11 @@ export class LoginComponent implements OnInit, OnChanges,OnDestroy {
                       {name:"description",content:"Society Management Solution"},
                       {name:"keywords",content:"Angular4, Angular5, Society Management Solution"}
                     ]);
+    
   }
 
-  ngOnChanges(){
-
+  ngAfterViewInit(){
+    this._common.componentBGUpdate('login');
   }
 
   ngOnDestroy(){
