@@ -4,37 +4,21 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
-
+import { LayoutModule } from "@angular/cdk/layout";
 import { environment } from '../environments/environment';
 // import * as user from './common/index';
 // import * as layout from './layout/index';
-import * as services from './service/index';
-import { LoginComponent } from './common/login/login.component';
-import { RegistrationComponent } from './common/registration/registration.component';
-import { PagenotfoundComponent } from './common/pagenotfound/pagenotfound.component';
-import { ForgotpasswordComponent } from './common/forgotpassword/forgotpassword.component';
+import * as services from './service';
+import * as common from './common';
 import { AuthGuard } from './auth.guard';
 import { AppRoute } from './app.route';
-import { ChangepasswordComponent } from './common/changepassword/changepassword.component';
-import { ResetpasswordComponent } from './common/resetpassword/resetpassword.component';
-import { NavigationComponent } from './common/navigation/navigation.component';
-import { FaqComponent } from './common/faq/faq.component';
+
 // import { UserComponent } from './profile/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegistrationComponent,
-    PagenotfoundComponent,
-    ForgotpasswordComponent,
-    ChangepasswordComponent,
-    ResetpasswordComponent,
-    NavigationComponent,
-    FaqComponent,
-    //...layout.layoutContainer,
-    //...user.usrContainer,
-    //UserComponent
+    ...common.commonContainer
   ],
   imports: [
     BrowserModule,
@@ -42,6 +26,7 @@ import { FaqComponent } from './common/faq/faq.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    LayoutModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ ...services.serviceContainer,AuthGuard],

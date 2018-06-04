@@ -15,7 +15,8 @@ const appRoute:Routes=[
   {path:"register", component:common.RegistrationComponent},
   {path:"forgotpassword", component:common.ForgotpasswordComponent},
   //{path:"profile",component:profile.UserComponent,data:{ preload:false},resolve:{users:UserResolverService}},
-  {path:'',redirectTo:'/login',pathMatch:'full'},
+  { path:"landing", loadChildren:'./landing/landing.module#LandingModule'},
+  {path:'',redirectTo:'/landing',pathMatch:'full'},
   { path:"**", component:common.PagenotfoundComponent}
 ]
 
