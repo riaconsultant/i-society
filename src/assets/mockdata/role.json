@@ -1,3 +1,9 @@
 {
-
+    "admin":true,
+    "owner":true,
+    "tenant":true,
+    "account_admin":true,
+    "account_manager":true,
+    "security":true,
+    "vendor":true
 }
