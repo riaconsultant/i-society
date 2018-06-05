@@ -1,0 +1,20 @@
+There should have 3 majar roles in the Application.
+
+Role based UI
+1. Admin
+    1. CRUD
+    2. Process (Approve/Reject)
+2. Flat Owner
+    1. CRU
+
+3. Tentant
+    1. CRU
+4. Viewer
+    1. R - Common info
+5. PowerViewer
+    1. R - All info
+
+Two Data Storage
+1. Master Data
+2. Transaction Data
+
