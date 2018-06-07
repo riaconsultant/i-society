@@ -13,9 +13,24 @@ Role based UI
     1. R - Common info
 5. PowerViewer
     1. R - All info
-    
+
 
 Two Data Storage
 1. Master Data
 2. Transaction Data
+
+# Architecture
+
+
+# Features
+1. Complaint Module
+2. Assets Tracker Module
+3. Document repository 
+4. Event Module
+5. Flat Module
+6. Forum Module
+
+
+# Technology
+
 
