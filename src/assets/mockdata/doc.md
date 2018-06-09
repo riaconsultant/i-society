@@ -35,7 +35,8 @@ Two Data Storage
 10. Payment Module
 11. Poll Module
 12. Profile Module
-13. 
+13. Staff Module
+14. Visitor Module
 
 # Technology
 
