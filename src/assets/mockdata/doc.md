@@ -1,6 +1,8 @@
+# Society Management Application
+
 There should have 3 majar roles in the Application.
 
-Role based UI
+# Role based UI
 1. Admin
     1. CRUD
     2. Process (Approve/Reject)
@@ -46,6 +48,8 @@ Two Data Storage
 4. Electron
 5. MongoDB
 6. MySQL
-7. 
+7. Express
+8. JWT
+9. 
 
 
