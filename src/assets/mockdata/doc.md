@@ -40,4 +40,12 @@ Two Data Storage
 
 # Technology
 
+1. Angular 6
+2. Bootstrap
+3. jQuery
+4. Electron
+5. MongoDB
+6. MySQL
+7. 
+
 
