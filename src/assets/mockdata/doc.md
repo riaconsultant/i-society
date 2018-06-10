@@ -39,6 +39,13 @@ Two Data Storage
 12. Profile Module
 13. Staff Module
 14. Visitor Module
+15. Reports (Data & Graph)
+    1. Daily Report
+    2. Monthly Report
+    3. Calender Report
+    4. Date-Selection Report
+    5. 
+16. 
 
 # Technology
 
